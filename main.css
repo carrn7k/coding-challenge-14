@@ -1,0 +1,79 @@
+body {
+	background-color: #fafafa;
+	margin: 0;
+}
+.welcome-screen {
+}
+.welcome-screen h1 {
+	text-align: center;
+  margin-top: 50vh;
+}
+.game-setup h3 {
+	text-align: center;
+	color: blue;
+}
+.game-choices {
+	display: flex;
+	justify-content: center;
+}
+.game-choices button {
+	margin: 5px;
+}
+
+
+.game-screen {
+}
+.game-title {
+	text-align: center;
+}
+.game-info {
+	width: 100%;
+	background-color: white;
+	display: flex;
+}
+.game-board {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #0000000d;
+  padding: 50px 0 50px 0;
+  margin: 0 20px 0 20px;
+  border-radius: 10px;
+}
+
+/* 3 x 3 */
+.game-piece {
+	width: 26%;
+	margin: 10px;
+	height: 200px;
+	background-color: #ffc107;
+	border-radius: 3px;
+	box-shadow: 4px 4px 7px 2px #aeaeae;
+}
+.game-icon {
+	transition: .2s ease-out;
+}
+.game-icon-show {
+	position: inherit;
+  background-color: white;
+  width: 140px;
+  height: 140px;
+  margin-top: 17%;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 100px;
+}
+.game-icon-hide {
+  width: 0;
+  height: 0;
+  margin-top: 17%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.game-icon p {
+	display: none;
+	position: relative;
+  top: 40%;
+  text-align: center;
+}
