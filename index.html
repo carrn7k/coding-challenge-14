@@ -3,11 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="main.css" />
+
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro|Ubuntu" rel="stylesheet">
+
+
   </head>
   <body onload="renderPage()">
 
     <main>
+
 
       <div class="welcome-screen">
         <h1>Welcome to hell...</h1>
@@ -22,63 +29,53 @@
       </div>
 
       <div class="game-screen">
-        <div class="game-title">
-          <h1>Matching Game</h1>
-        </div>
-        <div class="game-info">
-          <p>This is Game Info</p>
-        </div>
-        <div class="game-board">
-          <div class="game-piece">
-            <div class="game-icon game-icon-hide">
-              <p>Test</p>
-            </div>
-          </div>
-          <div class="game-piece">
-            <div class="game-icon game-icon-hide">
-              <p>Test</p>
-            </div>
-          </div>
-          <div class="game-piece">
-            <div class="game-icon game-icon-hide">
-              <p>Test</p>
-            </div>
-          </div>
-          <div class="game-piece">
-            <div class="game-icon game-icon-hide">
-              <p>Test</p>
-            </div>
-          </div>
-          <div class="game-piece">
-            <div class="game-icon game-icon-hide">
-              <p>Test</p>
-            </div>
-          </div>
-          <div class="game-piece">
-            <div class="game-icon game-icon-hide">
-              <p>Test</p>
-            </div>
-          </div>
-          <div class="game-piece">
-            <div class="game-icon game-icon-hide">
-              <p>Test</p>
-            </div>
-          </div>
-          <div class="game-piece">
-            <div class="game-icon game-icon-hide">
-              <p>Test</p>
-            </div>
-          </div>
-          <div class="game-piece">
-            <div class="game-icon game-icon-hide">
-              <p>Test</p>
-            </div>
-          </div>
-        </div>
-      </div>
 
+        <div class="match-trophy trophy-hide" id="match-trophy">
+          <div class="trophy-win trophy-win-hide" id="trophy-win">You Win!</div>
+          <div class="trophy-child">
+            <i></i>
+          </div>
+          <div class="trophy-child">
+            <i class="fas"></i>
+          </div>
+        </div>
+
+        <div class="game-title">
+          <h1 class="fas">Match it Up</h1>
+        </div>
+
+        <div class="game-info">
+          <div class="game-numbers">
+            <div class="score" id="score"></div>
+            <div class="timer" id="timer"></div>
+            <div class="moves" id="moves"></div>
+          </div>
+          <div class="reset">
+            <button id="reset-btn">Reset</button>
+          </div>
+          <div class="game-choices-pan">
+            <h4>size:</h4>
+            <ul>
+              <li>
+                <button class="size-change-btn" id="sm">S</button>
+              </li>
+              <li>
+                <button class="size-change-btn" id="md">M</button>
+              </li>
+              <li>
+                <button class="size-change-btn" id="lg">L</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="game-board" id="game-board">
+        </div>
+
+      </div>
     </main>
-  
+
   <script src="main.js"></script>
+
   </body>
 </html>

@@ -19,61 +19,245 @@ body {
 .game-choices button {
 	margin: 5px;
 }
-
+.match-trophy {
+	width: 100%;
+	top: 50%;
+	z-index: 100;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  transition: 1s ease-in;
+}
+.trophy-win {
+	width: 100%;
+	text-align: center;
+	font-family: 'Roboto Mono', monospace;
+}
+.trophy-win-display {
+	display: block;
+}
+.trophy-win-hide {
+	display: none;
+}
+.trophy-hide {
+	display: none;
+	opacity: 0;
+}
+.trophy-display {
+	opacity: .8;
+}
+.trophy-child {
+	transition: 2s;
+}
+.trophy-child i {
+	font-weight: bold;
+	font-size: 38px;
+}
 
 .game-screen {
+	max-width: 100%;
+	background-color: #07aaf42e;
 }
 .game-title {
+	margin: -35px 0 -25px 0;
+	padding: 10px;
 	text-align: center;
+	font-weight: bold;
+	font-size: 28px;
+	text-transform: uppercase;
+}
+.game-title h1 {
+	font-family: 'Ubuntu', sans-serif;
 }
 .game-info {
 	width: 100%;
-	background-color: white;
+	height: 70px;
 	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: black;
+	color: white;
+}
+.game-numbers {
+	width: 33%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.game-numbers div {
+	margin: 8px;
+	font-family: 'Roboto Mono', monospace;
+}
+.reset {
+	width: 33%;
+	display: flex;
+	justify-content: flex-end;
+}
+.reset button {
+	height: 35px;
+	width: 90px;
+	background-color: orange;
+	border: 0;
+	border-radius: 10px;
+	color: black;
+	font-weight: bold;
+	font-family: 'Source Sans Pro', sans-serif;
+	cursor: pointer;
+	transition: .5s;
+}
+.reset button:hover {
+	background-color: #ffecb2;
+}
+.game-choices-pan {
+	width: 33%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: 	center;
+}
+.game-choices-pan h4 {
+	width: 65%;
+	padding-right: 10px;
+	text-align: right; 
+	font-family: 'Roboto Mono', monospace;;
+}
+.game-choices-pan ul {
+	width: 35%;
+	padding: 0;
+	list-style: none;
+}
+.game-choices-pan button {
+  width: 35px;
+  height: 35px;
+  border-radius: 30px;
+  border: 1px solid #504848;
+  background-color: #707070;
+  box-shadow: inset -1px 1px 9px 1px #2f2b2b;
+  color: #fafafa;
+  margin: 2px;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: 'Source Sans Pro', sans-serif;
+  transition: .3s ease-in;
+}
+.game-choices-pan button:hover {
+	background-color: grey;
+	cursor: pointer;
 }
 .game-board {
-  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   background-color: #0000000d;
-  padding: 50px 0 50px 0;
-  margin: 0 20px 0 20px;
+  padding: 30px 0 30px 0;
+  margin: 0 10% 0 10%;
   border-radius: 10px;
 }
 
 /* 3 x 3 */
 .game-piece {
-	width: 26%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 15%;
 	margin: 10px;
-	height: 200px;
+	height: 115px;
 	background-color: #ffc107;
 	border-radius: 3px;
 	box-shadow: 4px 4px 7px 2px #aeaeae;
+	cursor: pointer;
+	transition: .5s;
+}
+.game-piece:hover {
+	opacity: .8;
 }
 .game-icon {
-	transition: .2s ease-out;
-}
-.game-icon-show {
-	position: inherit;
+	width: 60%;
+  height: 70%;
+	transition: .5s;
   background-color: white;
-  width: 140px;
-  height: 140px;
-  margin-top: 17%;
-  margin-right: auto;
-  margin-left: auto;
   border-radius: 100px;
 }
-.game-icon-hide {
-  width: 0;
-  height: 0;
-  margin-top: 17%;
-  margin-right: auto;
-  margin-left: auto;
+.game-icon-show {
+	opacity: 1;
 }
-.game-icon p {
+.game-icon-hide {
+  opacity: 0;
+}
+.game-icon i {
 	display: none;
 	position: relative;
-  top: 40%;
+  top: 34%;
   text-align: center;
+  font-size: 34px;
+}
+
+/* Mobile View */
+@media screen and (max-width: 399px) {
+	.game-piece {
+		height: 70px;
+	}
+	.game-icon i {
+		font-size: 18px;
+	}
+	.game-title h1 {
+		font-size: 42px;
+	}
+	.game-info {
+		font-size: 11px;
+	}
+	.reset button {
+		height: 23px;
+    width: 61px;
+	}
+	.game-choices-pan button {
+		height: 24px;
+		width: 24px;
+	}
+}
+
+/* Tablet View */
+@media screen and (min-width: 400px) and (max-width: 850px) {
+	.game-piece {
+		height: 100px;
+	}
+	.game-icon i {
+		font-size: 24px;
+	}
+}
+@media screen and (max-width: 590px) {
+	.game-title h1 {
+		font-size: 45px;
+	}
+	.game-info {
+		font-size: 13px;
+	}
+	.reset button {
+		height: 27px;
+    width: 65px;
+	}
+	.game-choices-pan button {
+		height: 27px;
+		width: 27px;
+	}
+}
+
+
+
+/* Animations */
+
+@keyframes trophy-left {
+  from  {margin-left: 0}
+  to    {transform: scale(2.5); margin-left: 60%; color: blue}
+}
+
+@keyframes trophy-right {
+  from  {margin-right: 0}
+  to    {transform: scale(2.5); margin-right: 60%; color: blue;}
+}
+
+@keyframes trophy-win {
+	from  {opacity: 1; font-size: 10px; display: block}
+	to    {opacity: 1; font-size: 42px; display: block}
 }
