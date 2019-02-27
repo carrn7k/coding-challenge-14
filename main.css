@@ -6,18 +6,35 @@ body {
 }
 .welcome-screen h1 {
 	text-align: center;
-  margin-top: 50vh;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: bold;
+  margin-top: 45vh;
 }
 .game-setup h3 {
 	text-align: center;
-	color: blue;
+  font-family: 'Source Sans Pro', sans-serif;
+	color: grey;
 }
 .game-choices {
 	display: flex;
 	justify-content: center;
 }
 .game-choices button {
+	text-align: center;
+	height: 31px;
+	width: 64px;
 	margin: 5px;
+	padding: 2px;
+	background-color: black;
+	border: none;
+	border-radius: 17px;
+	color: white;
+	font-family: 'Source Sans Pro', sans-serif;
+	transition: .3s;
+}
+.game-choices button:hover {
+	background-color: #414141;
+	cursor: pointer;
 }
 .match-trophy {
 	width: 100%;
